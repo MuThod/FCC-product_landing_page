@@ -3,16 +3,25 @@ body {
     font-size: 18px;
     margin: 0px;
     padding: 0px;
+	--outline-color: hsl(348, 69%, 38%); /*Pinky red*/
+	--background: hsl(0, 0%, 100%);
+	--foreground: hsl(0, 0%, 31%); /*Dark grey*/
+	--shadow: hsl(210, 10%, 59%);
+	--header-height: 60px;
+	--header-offset: 70px;
+	--header-neg-offset: -70px;
+	--content-width: 750px;
 }
 
 header {
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 60px;
-    background-color: hsl(215, 100%, 18%);
+    height: var(--header-height);
+    background-color: var(--outline-color);
+	font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
-    color: hsl(40, 99%, 58%);
+    color: var(--background);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -26,20 +35,22 @@ header a {
 }
 
 main {
-    max-width: 700px;
+    max-width: var(--content-width);
     margin: 70px auto 30px auto;
-	padding: 20px;
-    background-color: hsla(198, 27%, 55%, 3%);
+	padding: 0px 20px 20px 20px;
     border-radius: 15px;
+	background-color: var(--background);
+	color: var(--foreground);
 }
 
-footer {
+#contacts {
     max-width: 500px;
     margin: 30px auto;
-    background-color: hsl(40, 99%, 58%);
+    background-color: var(--outline-color);
+	color: var(--background);
     padding: 15px 30px;
     border-radius: 30px;
-    box-shadow: 5px 5px 5px 0px hsl(210, 10%, 59%);
+    box-shadow: 5px 5px 5px 0px var(--shadow);
 }
 
 video {
@@ -48,6 +59,7 @@ video {
 
 a {
     text-decoration: none;
+	color: inherit;
 }
 
 img {
@@ -56,8 +68,7 @@ img {
 
 nav {
     width: 380px;
-    font-family: 'Ubuntu', sans-serif;
-    z-index: 1000;
+    z-index: 10;
 }
 
 ul {
@@ -76,22 +87,40 @@ h1 {
 	margin: 30px 0px;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 2em;
-	color: hsl(40, 99%, 58%);
+	color: var(--outline-color);
 	text-align: center;
 }
 
 h2 {
     font-family: 'Ubuntu', sans-serif;
-    color: hsl(215, 100%, 18%);
+	background-color: var(--outline-color);
+    color: var(--background);
+	border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 footer h2 {
     margin-top: 15px;
     margin-bottom: 10px;
+	padding: 0px;
+}
+
+.offseted {
+	border-top: var(--header-offset) solid transparent;
+    margin-top: var(--header-neg-offset);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
 }
 
 article {
     margin-bottom: 70px;
+}
+
+section {
+	padding: 0px 30px;
 }
 
 figure {
@@ -110,7 +139,7 @@ form {
 }
 
 .tile {
-    box-shadow: 5px 5px 5px 0px hsl(210, 10%, 59%);
+    box-shadow: 3px 3px 4px 2px var(--shadow);
     z-index: 0;
 }
 
@@ -123,15 +152,17 @@ form {
 @keyframes tile-animation {
     100% {
         transform: scale(1.01);
-        box-shadow: 5px 5px 5px 5px hsl(210, 10%, 59%);
+        box-shadow: 3px 3px 5px 3px var(--shadow);
     }
 }
 
 .project-tile {
     max-width: 430px;
-    background-color: #A8B1B8;
+    background-color: var(--foreground);
+	color: var(--background);
     border-radius: 10px;
-    margin: 10px;
+    margin: 20px;
+	padding: 0px;
 }
 
 .project-img {
@@ -142,22 +173,32 @@ form {
 	margin: 8px;
 	font-size: 16px;
 	text-align: center;
-	color: hsl(215, 100%, 18%);
 }
 
 .button {
     padding: 15px;
     margin: 7px;
-	color: hsl(215, 100%, 18%);
-    background-color: hsl(206, 10%, 69%);
+	font-weight: bold;
+    background-color: var(--outline-color);
+	color: var(--background);
     border-radius: 9px;
 }
 
 .navlink {
     padding: 10px 15px;
-    border-width: 2px;
-    border-color: hsl(215, 100%, 24%);
-    border-style: none none none solid;
+    border-width: 1px;
+    border-left-color: hsl(348, 69%, 45%);
+    border-left-style: solid;
+	border-right-color: hsl(348, 69%, 30%);
+    border-right-style: solid;
+}
+
+.navlink:nth-child(1) {
+	border-left-style: none;
+}
+
+.navlink:nth-last-child(1) {
+	border-right-style: none;
 }
 
 .navlink:hover {
@@ -195,6 +236,13 @@ form {
     max-width: 47%;
 }
 
+.content {
+	border-color: var(--outline-color);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px 0px 15px 15px;
+}
+
 #logo a {
     margin: 0px;
     padding: 0px;
@@ -206,14 +254,16 @@ form {
 
 #header-img {
     height: 50px;
+	margin-right: 15px;
 }
 
 #home {
-    right: 0px;
-    bottom: 0px;
+    right: 5px;
+    bottom: 5px;
     padding: 5px;
-	color: hsl(40, 99%, 58%);
-	background-color: hsl(215, 100%, 18%);
+	font-size: 32px;
+	color: var(--background);
+	background-color: var(--outline-color);
 }
 
 #welcome-section {
@@ -221,7 +271,7 @@ form {
 	display: flex;
 	flex-direction: row;
     justify-content: space-between;
-	padding: 50px 0px;
+	padding: 0px;
 }
 
 #projects-section {
@@ -232,6 +282,8 @@ form {
 #projects {
     display: grid;
     grid-template-columns: 50% 50%;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #show-more {
@@ -265,12 +317,13 @@ form {
 
 #submit {
     font-size: 18px;
+	font-weight: bold;
     padding: 0.5em 1em;
     width: min-content;
     margin: 10px auto 0px auto;
     border-radius: 10px;
-    background-color: hsl(215, 100%, 18%);
-    color: hsl(40, 99%, 58%);
+    background-color: var(--background);
+    color: var(--outline-color);
 }
 
 #submit:hover {
@@ -282,7 +335,8 @@ form {
 
 @keyframes submit-animation {
     100% {
-        background-color: hsl(215, 100%, 28%);
+        background-color: var(--outline-color);
+		color: var(--background);
     }
 }
 
@@ -310,11 +364,5 @@ form {
 
     nav {
         margin: 0px auto;
-    }
-
-    .navlink:nth-last-child(1) {
-        border-width: 2px;
-        border-color: hsl(215, 100%, 24%);
-        border-style: none solid none solid;
     }
 }
