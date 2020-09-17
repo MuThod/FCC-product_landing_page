@@ -7,9 +7,9 @@ body {
 	--background: hsl(0, 0%, 100%);
 	--foreground: hsl(0, 0%, 31%); /*Dark grey*/
 	--shadow: hsl(210, 10%, 59%);
-	--header-height: 60px;
-	--header-offset: 70px;
-	--header-neg-offset: -70px;
+	--header-height: 9.7vh;
+	--header-offset: 10vh;
+	--header-neg-offset: -10vh;
 	--content-width: 750px;
 }
 
@@ -96,7 +96,7 @@ li {
 h1 {
 	margin: 0px;
 	padding: 0px 15px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 h2 {
@@ -193,7 +193,7 @@ form {
 }
 
 .navlink {
-    padding: 10px 15px;
+    padding: 1vh 15px;
     border-width: 1px;
     border-left-color: hsl(348, 69%, 45%);
     border-left-style: solid;
@@ -261,7 +261,7 @@ form {
 }
 
 #header-img {
-    height: 50px;
+    height: 8vh;
 	margin-left: 50px;
 }
 
@@ -275,7 +275,7 @@ form {
 }
 
 #welcome-section {
-    height: 100vh;
+    height: 90vh;
 	display: flex;
 	flex-direction: row;
     justify-content: space-between;
