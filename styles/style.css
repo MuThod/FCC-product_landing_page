@@ -217,8 +217,8 @@ form {
 
 @keyframes nav-animation {
     100% {
-        padding-top: 15px;
-        padding-bottom: 5px;
+        padding-top: 1.5vh;
+        padding-bottom: 0.5vh;
     }
 }
 
