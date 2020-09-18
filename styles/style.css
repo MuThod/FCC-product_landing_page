@@ -3,14 +3,14 @@ body {
     font-size: 18px;
     margin: 0px;
     padding: 0px;
-	--outline-color: hsl(348, 69%, 38%); /*Pinky red*/
-	--background: hsl(0, 0%, 100%);
-	--foreground: hsl(0, 0%, 31%); /*Dark grey*/
-	--shadow: hsl(210, 10%, 59%);
-	--header-height: 9.7vh;
-	--header-offset: 10vh;
-	--header-neg-offset: -10vh;
-	--content-width: 750px;
+  	--outline-color: hsl(348, 69%, 38%); /*Pinky red*/
+  	--background: hsl(0, 0%, 100%);
+  	--foreground: hsl(0, 0%, 31%); /*Dark grey*/
+  	--shadow: hsl(210, 10%, 59%);
+  	--header-height: 9.7vh;
+  	--header-offset: 10vh;
+	  --header-neg-offset: -10vh;
+	  --content-width: 750px;
 }
 
 header {
@@ -19,7 +19,7 @@ header {
     right: 0px;
     height: var(--header-height);
     background-color: var(--outline-color);
-	font-family: 'Ubuntu', sans-serif;
+	  font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
     color: var(--background);
     display: flex;
@@ -37,29 +37,29 @@ header a {
 main {
     max-width: var(--content-width);
     margin: 70px auto 30px auto;
-	padding: 0px 20px 20px 20px;
+	  padding: 0px 20px 20px 20px;
     border-radius: 15px;
-	background-color: var(--background);
-	color: var(--foreground);
+	  background-color: var(--background);
+	  color: var(--foreground);
 }
 
 #contacts {
     max-width: 500px;
     margin: 30px auto;
     background-color: var(--outline-color);
-	color: var(--background);
+	  color: var(--background);
     padding: 15px 30px;
     border-radius: 30px;
     box-shadow: 5px 5px 5px 0px var(--shadow);
 }
 
 video {
-	z-index: 0;
+	  z-index: 0;
 }
 
 a {
     text-decoration: none;
-	color: inherit;
+	  color: inherit;
 }
 
 img {
@@ -84,13 +84,13 @@ li {
 }
 
 #presentation {
-	margin: 30px 0px;
-	font-family: 'Ubuntu', sans-serif;
-	background-color: var(--background);
-	font-size: 2em;
-	font-weight: bold;
-	color: var(--outline-color);
-	text-align: center;
+	  margin: 30px 0px;
+	  font-family: 'Ubuntu', sans-serif;
+	  background-color: var(--background);
+	  font-size: 2em;
+	  font-weight: bold;
+	  color: var(--outline-color);
+	  text-align: center;
 }
 
 #company-name {
@@ -103,20 +103,20 @@ h2 {
     font-family: 'Ubuntu', sans-serif;
 	background-color: var(--outline-color);
     color: var(--background);
-	border-radius: 15px 15px 0px 0px;
+	  border-radius: 15px 15px 0px 0px;
     padding: 10px;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
 }
 
 footer h2 {
     margin-top: 15px;
     margin-bottom: 10px;
-	padding: 0px;
+	  padding: 0px;
 }
 
 .offseted {
-	border-top: var(--header-offset) solid transparent;
+	  border-top: var(--header-offset) solid transparent;
     margin-top: var(--header-neg-offset);
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
@@ -128,12 +128,12 @@ article {
 }
 
 section {
-	padding: 0px 30px;
+	  padding: 0px 30px;
 }
 
 figure {
-	margin: 0px;
-	padding: 0px;
+	  margin: 0px;
+	  padding: 0px;
 }
 
 form {
@@ -167,28 +167,28 @@ form {
 .project-tile {
     max-width: 430px;
     background-color: var(--foreground);
-	color: var(--background);
+	  color: var(--background);
     border-radius: 10px;
     margin: 20px;
-	padding: 0px;
+	  padding: 0px;
 }
 
 .project-img {
-	border-radius: 10px 10px 0px 0px;
+	  border-radius: 10px 10px 0px 0px;
 }
 
 .project-title {
-	margin: 8px;
-	font-size: 16px;
-	text-align: center;
+	  margin: 8px;
+	  font-size: 16px;
+	  text-align: center;
 }
 
 .button {
     padding: 15px;
     margin: 7px;
-	font-weight: bold;
+	  font-weight: bold;
     background-color: var(--outline-color);
-	color: var(--background);
+	  color: var(--background);
     border-radius: 9px;
 }
 
@@ -197,16 +197,16 @@ form {
     border-width: 1px;
     border-left-color: hsl(348, 69%, 45%);
     border-left-style: solid;
-	border-right-color: hsl(348, 69%, 30%);
+	  border-right-color: hsl(348, 69%, 30%);
     border-right-style: solid;
 }
 
 .navlink:nth-child(1) {
-	border-left-style: none;
+	  border-left-style: none;
 }
 
 .navlink:nth-last-child(1) {
-	border-right-style: none;
+	  border-right-style: none;
 }
 
 .navlink:hover {
@@ -240,12 +240,12 @@ form {
 }
 
 .welcome-sections {
-	margin: 5px;
+	  margin: 5px;
     max-width: 47%;
 }
 
 .content {
-	border-color: var(--outline-color);
+	  border-color: var(--outline-color);
     border-width: 1px;
     border-style: solid;
     border-radius: 0px 0px 15px 15px;
@@ -262,24 +262,24 @@ form {
 
 #header-img {
     height: 8vh;
-	margin-left: 50px;
+	  margin-left: 50px;
 }
 
 #home {
     right: 5px;
     bottom: 5px;
     padding: 5px;
-	font-size: 32px;
-	color: var(--background);
-	background-color: var(--outline-color);
+	  font-size: 32px;
+	  color: var(--background);
+	  background-color: var(--outline-color);
 }
 
 #welcome-section {
     height: 90vh;
-	display: flex;
-	flex-direction: row;
+	  display: flex;
+	  flex-direction: row;
     justify-content: space-between;
-	padding: 0px;
+	  padding: 0px;
 }
 
 #projects-section {
@@ -290,8 +290,8 @@ form {
 #projects {
     display: grid;
     grid-template-columns: 50% 50%;
-	padding-left: 10px;
-	padding-right: 10px;
+	  padding-left: 10px;
+	  padding-right: 10px;
 }
 
 #show-more {
@@ -299,11 +299,11 @@ form {
 }
 
 #summary {
-	font-size: 16px;
+	  font-size: 16px;
 }
 
 #video {
-	width: 100%;
+	  width: 100%;
 }
 
 #contact-links {
@@ -325,7 +325,7 @@ form {
 
 #submit {
     font-size: 18px;
-	font-weight: bold;
+	  font-weight: bold;
     padding: 0.5em 1em;
     width: min-content;
     margin: 10px auto 0px auto;
@@ -344,11 +344,17 @@ form {
 @keyframes submit-animation {
     100% {
         background-color: var(--outline-color);
-		color: var(--background);
+		    color: var(--background);
     }
 }
 
 @media (max-width: 550px) {
+    body {
+        --header-height: 19.4vh;
+  	    --header-offset: 20vh;
+	      --header-neg-offset: -20vh;
+    }
+
     header {
         padding: 0px;
         height: 100px;
