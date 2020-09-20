@@ -10,7 +10,7 @@ body {
   	--header-height: 9.7vh;
   	--header-offset: 10vh;
 	--header-neg-offset: -10vh;
-    --content-width: 750px;
+    --content-width: 1000px;
 }
 
 header {
@@ -349,6 +349,12 @@ form {
     }
 }
 
+@media (max-width: 1200px) {
+    body {
+        --content-width: 750px;
+    }
+}
+
 @media (max-width: 550px) {
     body {
         --header-height: 19.4vh;
@@ -358,7 +364,7 @@ form {
 
     header {
         padding: 0px;
-        height: 100px;
+        height: var(--header-height);
         flex-direction: column;
         align-content: center;
     }
